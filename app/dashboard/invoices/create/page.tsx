@@ -1,3 +1,5 @@
+'use server'
+
 import Form from '@/app/dashboard/invoices/create-form';
 import Breadcrumbs from '@/app/dashboard/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';

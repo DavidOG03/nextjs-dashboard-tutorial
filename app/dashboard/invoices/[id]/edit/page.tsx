@@ -1,6 +1,8 @@
+'use server'
 import Form from '@/app/dashboard/invoices/edit-form';
 import Breadcrumbs from '@/app/dashboard/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
+import { notFound } from 'next/navigation';
  
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
@@ -8,6 +10,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     fetchInvoiceById(id),
     fetchCustomers(),
   ]);
+
+  if (!invoice) {
+    notFound();
+  }
   return (
     <main>
       <Breadcrumbs
