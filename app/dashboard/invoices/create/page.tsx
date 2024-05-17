@@ -1,4 +1,9 @@
 'use server'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Create Invoices',
+};
 
 import Form from '@/app/dashboard/invoices/create-form';
 import Breadcrumbs from '@/app/dashboard/invoices/breadcrumbs';

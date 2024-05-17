@@ -1,5 +1,11 @@
 'use server'
 
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
+
 import Pagination from '@/app/dashboard/invoices/pagination';
 import Search from '@/app/ui/search';
 import Table from '@/app/dashboard/invoices/table';

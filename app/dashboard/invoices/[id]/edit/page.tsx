@@ -1,4 +1,9 @@
 'use server'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Edit Invoices',
+};
 import Form from '@/app/dashboard/invoices/edit-form';
 import Breadcrumbs from '@/app/dashboard/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
