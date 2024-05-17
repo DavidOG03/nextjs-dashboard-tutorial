@@ -1,4 +1,4 @@
-'use server'
+// 'use server'
 
 
 import {fetchCardData} from '@/app/lib/data';
@@ -20,7 +20,6 @@ const iconMap = {
 };
 
 export default async function CardWrapper() {
-
   const {
     numberOfInvoices,
     numberOfCustomers,
